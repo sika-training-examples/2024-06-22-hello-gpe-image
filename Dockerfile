@@ -1,3 +1,3 @@
-FROM nginx
-COPY site.conf /etc/nginx/conf.d/default.conf
-COPY index.html /usr/share/nginx/html/index.html
+FROM sikalabs/slu:v0.77.0
+COPY index.html /
+CMD ["slu", "serve-files"]
